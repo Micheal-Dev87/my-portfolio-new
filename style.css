@@ -1,3 +1,4 @@
+/* Reset & Base Styles */
 * {
     margin: 0;
     padding: 0;
@@ -15,12 +16,14 @@ html {
     scroll-behavior: smooth;
 }
 
+/* Navigation Bar */
 nav {
     background: #0f172a;
     padding: 20px 0;
     position: sticky;
     top: 0;
     z-index: 1000;
+    border-bottom: 2px solid #1e293b;
 }
 
 .nav-container {
@@ -47,12 +50,14 @@ nav {
     color: #f1f5f9;
     text-decoration: none;
     font-weight: 500;
+    transition: color 0.3s;
 }
 
 .nav-links a:hover {
     color: #38bdf8;
 }
 
+/* Header / Hero */
 header {
     text-align: center;
     padding: 80px 20px;
@@ -69,6 +74,7 @@ header p {
     opacity: 0.9;
 }
 
+/* Sections */
 section {
     max-width: 900px;
     margin: 40px auto;
@@ -84,6 +90,23 @@ h2 {
     color: #38bdf8;
 }
 
+ul {
+    list-style: none;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+a {
+    color: #38bdf8;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Projects Section */
 .projects-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -126,14 +149,32 @@ h2 {
     background: #1e293b;
 }
 
+/* Contact Section */
+#contact ul {
+    margin-top: 15px;
+}
+
+#contact ul li a {
+    word-break: break-word;
+}
+
+/* Footer */
 footer {
     text-align: center;
     padding: 30px;
     color: #94a3b8;
+    background: #0f172a;
+    border-top: 2px solid #1e293b;
 }
 
+/* Responsive for small screens */
 @media (max-width: 500px) {
     .projects-container {
         grid-template-columns: 1fr;
+    }
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
     }
 }
